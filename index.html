@@ -1,31 +1,125 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Главная</title>
-  <link rel="stylesheet" href="style.css">
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="UTF-8"><title>Главная</title>
+<link rel="stylesheet" href="style.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(102130427, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/102130427" style="position:absolute; left:-9999px;" alt="" />
+  <form id="contactForm">
+  <input type="text" name="name" placeholder="Ваше имя" required>
+  <input type="tel" name="phone" placeholder="Телефон" required>
+  <button type="submit" class="cta-button">Оставить заявку</button>
+</form>
+<p id="formStatus" style="margin-top: 1em;"></p>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = this.name.value;
+  const phone = this.phone.value;
+  const message = `🧾 Новая заявка с сайта!\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+  fetch('https://api.telegram.org/bot8077951487:sendMessage', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      chat_id: 332539929,
+      text: message
+    })
+  })
+  .then(res => {
+    document.getElementById('formStatus').innerText = 'Заявка отправлена! ✅';
+    this.reset();
+  })
+  .catch(err => {
+    document.getElementById('formStatus').innerText = 'Ошибка отправки. Попробуйте ещё раз.';
+  });
+});
+</script>
+</div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(102130427, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/102130427" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 </head>
-<body>
-  
+<body style="background-image: url('https://source.unsplash.com/1600x900/?ads,office');">
+
 <header>
   <nav class="navbar">
     <a href="index.html">Главная</a>
+    <a href="about.html">Обо мне</a>
     <a href="services.html">Услуги</a>
     <a href="cases.html">Кейсы</a>
-    <a href="reviews.html">Отзывы</a>
-    <a href="pricing.html">Цены</a>
-    <a href="about.html">Преимущества</a>
     <a href="contact.html">Контакты</a>
   </nav>
 </header>
 
-  <div class="container">
-    <h1>Настройка Яндекс Рекламы под ключ</h1><p>Привожу клиентов из поиска и РСЯ с заявками от 129 ₽. Настройка — за 2 дня.</p>
-  </div>
-  
+<div class="container">
+
+  <h1>Настройка Яндекс Рекламы</h1>
+  <p>🚀 Привожу клиентов из поиска и РСЯ<br>📈 CTR до 17%, заявки от 129 ₽<br>✅ Аудит и запуск за 2 дня</p>
+
+
+  <a class="button" href="contact.html">Получить бесплатную консультацию</a>
+
+  <form id="contactForm">
+  <input type="text" name="name" placeholder="Ваше имя" required>
+  <input type="tel" name="phone" placeholder="Телефон" required>
+  <button type="submit" class="cta-button">Оставить заявку</button>
+</form>
+<p id="formStatus" style="margin-top: 1em;"></p>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = this.name.value;
+  const phone = this.phone.value;
+  const message = `🧾 Новая заявка с сайта!\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+  fetch('https://api.telegram.org/bot8077951487:sendMessage', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      chat_id: 332539929,
+      text: message
+    })
+  })
+  .then(res => {
+    document.getElementById('formStatus').innerText = 'Заявка отправлена! ✅';
+    this.reset();
+  })
+  .catch(err => {
+    document.getElementById('formStatus').innerText = 'Ошибка отправки. Попробуйте ещё раз.';
+  });
+});
+</script>
+</div>
+
 <footer>
-  <p>&copy; 2025 Константин Бутенко. Настройка Яндекс Рекламы.</p>
+  <p>&copy; 2025 Константин. Настройка Яндекс Рекламы.</p>
 </footer>
 
-</body>
-</html>
+</body></html>
