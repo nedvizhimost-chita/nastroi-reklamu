@@ -75,3 +75,46 @@ img.profile {
 .cta-button:hover {
   background-color: #388e3c;
 }
+
+.form-block-modern {
+  background-color: #fffde7;
+  padding: 30px;
+  border: 2px solid #fff176;
+  border-radius: 12px;
+  margin-top: 40px;
+  text-align: center;
+}
+.form-block-modern h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: #fbc02d;
+}
+.form-block-modern p {
+  margin-bottom: 1em;
+}
+.form-block-modern input[type="text"],
+.form-block-modern input[type="tel"] {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.yellow-button {
+  background-color: #fdd835;
+  color: #222;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.yellow-button:hover {
+  background-color: #fbc02d;
+}

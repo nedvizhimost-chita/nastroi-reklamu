@@ -17,14 +17,49 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/102130427" style="position:absolute; left:-9999px;" alt="" />
   
-<div class="form-block">
-  <h2>Получить бесплатную консультацию</h2>
+
+<div class="form-block-modern">
+  <h2>МЫ ВАМ ПОЗВОНИМ И СДЕЛАЕМ ПОДАРОК!</h2>
+  <p>Оставьте свой номер,<br>мы перезвоним вам в течение 15 минут<br>и не отпустим без подарка</p>
   <form id="contactForm">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="tel" name="phone" placeholder="+7 (999) 123-45-67" required>
+    <button type="submit" class="yellow-button">Жду звонка</button>
+  </form>
+  <p style="font-size: 0.8em; color: #777;">Оставляя заявку, вы даёте согласие на обработку персональных данных</p>
+  <p id="formStatus" style="margin-top: 1em;"></p>
+</div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = this.name.value;
+  const phone = this.phone.value;
+  const message = `🧾 Новая заявка с сайта!\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+  fetch('https://api.telegram.org/bot8077951487:sendMessage', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      chat_id: 332539929,
+      text: message
+    })
+  })
+  .then(res => {
+    document.getElementById('formStatus').innerText = 'Заявка отправлена! ✅';
+    this.reset();
+  })
+  .catch(err => {
+    document.getElementById('formStatus').innerText = 'Ошибка отправки. Попробуйте ещё раз.';
+  });
+});
+</script>
+
+  <h2>Получить бесплатную консультацию</h2>
+  
     <input type="text" name="name" placeholder="Ваше имя" required>
     <input type="tel" name="phone" placeholder="Телефон" required>
     <button type="submit" class="cta-button">Оставить заявку</button>
   </form>
-  <p id="formStatus" style="margin-top: 1em;"></p>
+  
 </div>
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
@@ -55,7 +90,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   <input type="tel" name="phone" placeholder="Телефон" required>
   <button type="submit" class="cta-button">Оставить заявку</button>
 </form>
-<p id="formStatus" style="margin-top: 1em;"></p>
+
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -122,14 +157,49 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   <a class="button" href="contact.html">Получить бесплатную консультацию</a>
 
   
-<div class="form-block">
-  <h2>Получить бесплатную консультацию</h2>
+
+<div class="form-block-modern">
+  <h2>МЫ ВАМ ПОЗВОНИМ И СДЕЛАЕМ ПОДАРОК!</h2>
+  <p>Оставьте свой номер,<br>мы перезвоним вам в течение 15 минут<br>и не отпустим без подарка</p>
   <form id="contactForm">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="tel" name="phone" placeholder="+7 (999) 123-45-67" required>
+    <button type="submit" class="yellow-button">Жду звонка</button>
+  </form>
+  <p style="font-size: 0.8em; color: #777;">Оставляя заявку, вы даёте согласие на обработку персональных данных</p>
+  <p id="formStatus" style="margin-top: 1em;"></p>
+</div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = this.name.value;
+  const phone = this.phone.value;
+  const message = `🧾 Новая заявка с сайта!\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+  fetch('https://api.telegram.org/bot8077951487:sendMessage', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      chat_id: 332539929,
+      text: message
+    })
+  })
+  .then(res => {
+    document.getElementById('formStatus').innerText = 'Заявка отправлена! ✅';
+    this.reset();
+  })
+  .catch(err => {
+    document.getElementById('formStatus').innerText = 'Ошибка отправки. Попробуйте ещё раз.';
+  });
+});
+</script>
+
+  <h2>Получить бесплатную консультацию</h2>
+  
     <input type="text" name="name" placeholder="Ваше имя" required>
     <input type="tel" name="phone" placeholder="Телефон" required>
     <button type="submit" class="cta-button">Оставить заявку</button>
   </form>
-  <p id="formStatus" style="margin-top: 1em;"></p>
+  
 </div>
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
@@ -160,7 +230,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   <input type="tel" name="phone" placeholder="Телефон" required>
   <button type="submit" class="cta-button">Оставить заявку</button>
 </form>
-<p id="formStatus" style="margin-top: 1em;"></p>
+
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
