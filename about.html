@@ -14,9 +14,45 @@
         trackLinks:true,
         accurateTrackBounce:true
    });
-</script>
+
 <noscript><div><img src="https://mc.yandex.ru/watch/102130427" style="position:absolute; left:-9999px;" alt="" />
-  <a class="cta-button" href="contact.html">Связаться со мной</a>
+  
+
+
+<div class="form-block-green">
+  <h2>Оставьте заявку — и я перезвоню вам в течение 15 минут</h2>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="tel" name="phone" placeholder="+7 (999) 123-45-67" required>
+    <button type="submit" class="green-button">Жду звонка</button>
+  </form>
+  <p style="font-size: 0.8em; color: #777; text-align: center;">Отправляя заявку, вы даёте согласие на обработку персональных данных</p>
+  <p id="formStatus" style="margin-top: 1em;"></p>
+</div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = this.name.value;
+  const phone = this.phone.value;
+  const message = `🧾 Новая заявка с сайта!\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+  fetch('https://api.telegram.org/bot8077951487:sendMessage', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      chat_id: 332539929,
+      text: message
+    })
+  })
+  .then(res => {
+    document.getElementById('formStatus').innerText = 'Заявка отправлена! ✅';
+    this.reset();
+  })
+  .catch(err => {
+    document.getElementById('formStatus').innerText = 'Ошибка отправки. Попробуйте ещё раз.';
+  });
+});
+</script>
+
 </div></noscript>
 <!-- /Yandex.Metrika counter -->
 
@@ -34,8 +70,44 @@
         trackLinks:true,
         accurateTrackBounce:true
    });
+
+<noscript><div><img src="https://mc.yandex.ru/watch/102130427" style="position:absolute; left:-9999px;" alt="" />
+
+<div class="form-block-green">
+  <h2>Оставьте заявку — и я перезвоню вам в течение 15 минут</h2>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="tel" name="phone" placeholder="+7 (999) 123-45-67" required>
+    <button type="submit" class="green-button">Жду звонка</button>
+  </form>
+  <p style="font-size: 0.8em; color: #777; text-align: center;">Отправляя заявку, вы даёте согласие на обработку персональных данных</p>
+  <p id="formStatus" style="margin-top: 1em;"></p>
+</div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = this.name.value;
+  const phone = this.phone.value;
+  const message = `🧾 Новая заявка с сайта!\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+  fetch('https://api.telegram.org/bot8077951487:sendMessage', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      chat_id: 332539929,
+      text: message
+    })
+  })
+  .then(res => {
+    document.getElementById('formStatus').innerText = 'Заявка отправлена! ✅';
+    this.reset();
+  })
+  .catch(err => {
+    document.getElementById('formStatus').innerText = 'Ошибка отправки. Попробуйте ещё раз.';
+  });
+});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/102130427" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+</div></noscript>
 <!-- /Yandex.Metrika counter -->
 
 </head>
@@ -58,9 +130,45 @@
   <p>Меня зовут Константин. Я — специалист по Яндекс Рекламе с практическим опытом настройки 50 успешных рекламных кампаний. Помогаю компаниям находить клиентов, увеличивать продажи и экономить бюджет за счёт точной настройки поисковой рекламы и РСЯ.</p>
 
 
-  <a class="button" href="contact.html">Связаться со мной</a>
+  
 
-  <a class="cta-button" href="contact.html">Связаться со мной</a>
+  
+
+
+<div class="form-block-green">
+  <h2>Оставьте заявку — и я перезвоню вам в течение 15 минут</h2>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="tel" name="phone" placeholder="+7 (999) 123-45-67" required>
+    <button type="submit" class="green-button">Жду звонка</button>
+  </form>
+  <p style="font-size: 0.8em; color: #777; text-align: center;">Отправляя заявку, вы даёте согласие на обработку персональных данных</p>
+  <p id="formStatus" style="margin-top: 1em;"></p>
+</div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = this.name.value;
+  const phone = this.phone.value;
+  const message = `🧾 Новая заявка с сайта!\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+  fetch('https://api.telegram.org/bot8077951487:sendMessage', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      chat_id: 332539929,
+      text: message
+    })
+  })
+  .then(res => {
+    document.getElementById('formStatus').innerText = 'Заявка отправлена! ✅';
+    this.reset();
+  })
+  .catch(err => {
+    document.getElementById('formStatus').innerText = 'Ошибка отправки. Попробуйте ещё раз.';
+  });
+});
+</script>
+
 </div>
 
 <footer>

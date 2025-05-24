@@ -48,3 +48,43 @@ img.profile {
   float: right;
   margin-left: 20px;
 }
+
+.form-block-green {
+  background-color: #e8f5e9;
+  padding: 30px;
+  border: 2px solid #a5d6a7;
+  border-radius: 12px;
+  margin-top: 40px;
+  text-align: center;
+}
+.form-block-green h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #2e7d32;
+}
+.form-block-green input[type="text"],
+.form-block-green input[type="tel"] {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.green-button {
+  background-color: #43a047;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.green-button:hover {
+  background-color: #388e3c;
+}
